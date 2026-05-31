@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YongzNgajarUTBK - Persiapan SNBT 2026</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4f46e5', // Indigo 600
+                        secondary: '#facc15', // Yellow 400
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 cursor-pointer" onclick="showHome()">
+                    <div class="bg-primary text-white p-2 rounded-lg shadow-sm">
+                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                    </div>
+                    <span class="font-extrabold text-2xl text-gray-900 tracking-tight">YongzNgajar<span class="text-primary">UTBK</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" onclick="showHome()" class="text-gray-600 hover:text-primary font-medium transition-colors">Beranda</a>
+                    <a href="#modul" class="text-gray-600 hover:text-primary font-medium transition-colors">Modul Ajar</a>
+                    <a href="#" class="text-gray-400 hover:text-gray-600 font-medium transition-colors cursor-not-allowed">Try Out <span class="text-[10px] bg-gray-100 px-2 py-0.5 rounded-full ml-1">Segera</span></a>
+                </div>
+
+                <!-- Login Button -->
+                <div class="hidden md:flex">
+                    <button class="bg-indigo-50 text-primary hover:bg-primary hover:text-white px-5 py-2 rounded-full font-semibold transition-all duration-300">
+                        Masuk
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+        
+        <!-- HOME VIEW (Tampil saat pertama kali dibuka) -->
+        <div id="home-view" class="block">
+            <!-- Hero Section -->
+            <section class="bg-white overflow-hidden border-b border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-primary text-sm font-semibold mb-6">
+                            <span class="relative flex h-2 w-2">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            Persiapan SNBT 2026
+                        </div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-6 leading-tight">
+                            Tembus PTN Impian Tanpa <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">Bikin Pusing</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 mb-10 leading-relaxed">
+                            Belajar terarah, materi terstruktur, dan trik cepat ngerjain soal UTBK. Semuanya dikemas asik bareng YongzNgajarUTBK!
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <a href="#modul" class="bg-primary hover:bg-indigo-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-indigo-200 transition-all transform hover:-translate-y-1">
+                                Mulai Belajar Sekarang <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modul Ajar Section -->
+            <section id="modul" class="py-20 bg-slate-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Modul Ajar</h2>
+                        <p class="text-gray-500 max-w-2xl mx-auto">Pilih materi yang ingin kamu kuasai hari ini. Kami membaginya menjadi fondasi SNBT dan ujian mandiri.</p>
+                    </div>
+
+                    <!-- Kategori: Fondasi SNBT -->
+                    <div class="mb-12">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Fondasi SNBT</h3>
+                        </div>
+                        
+                        <!-- Grid 7 Subtes -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <!-- PU -->
+                            <div onclick="showSubject('PU', 'Penalaran Umum (PU)')" class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 cursor-pointer group">
+                                <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-brain"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Penalaran Umum</h4>
+                                <p class="text-gray-500 text-sm">Deduktif, Induktif, dan Kuantitatif.</p>
+                            </div>
+
+                            <!-- PPU -->
+                            <div onclick="showSubject('PPU', 'Pengetahuan & Pemahaman Umum (PPU)')" class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 cursor-pointer group">
+                                <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">PPU</h4>
+                                <p class="text-gray-500 text-sm">Pengetahuan & Pemahaman Umum.</p>
+                            </div>
+
+                            <!-- PBM -->
+                            <div onclick="showSubject('PBM', 'Pemahaman Bacaan & Menulis (PBM)')" class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 cursor-pointer group">
+                                <div class="w-14 h-14 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-pen-nib"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">PBM</h4>
+                                <p class="text-gray-500 text-sm">Pemahaman Bacaan dan Menulis.</p>
+                            </div>
+
+                            <!-- PK -->
+                            <div onclick="showSubject('PK', 'Pengetahuan Kuantitatif (PK)')" class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 cursor-pointer group">
+                                <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-calculator"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Kuantitatif</h4>
+                                <p class="text-gray-500 text-sm">Aljabar, Geometri, Statistika, dll.</p>
+                            </div>
+
+                            <!-- LBI -->
+                            <div onclick="showSubject('LBI', 'Literasi Bahasa Indonesia')" class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 cursor-pointer group">
+                                <div class="w-14 h-14 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-book"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Literasi B.Indo</h4>
+                                <p class="text-gray-500 text-sm">Menganalisis teks bacaan bahasa Indonesia.</p>
+                            </div>
+
+                            <!-- LBE -->
+                            <div onclick="showSubject('LBE', 'Literasi Bahasa Inggris')" class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 cursor-pointer group">
+                                <div class="w-14 h-14 bg-cyan-50 text-cyan-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-earth-americas"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Literasi B.Inggris</h4>
+                                <p class="text-gray-500 text-sm">Menganalisis teks bacaan bahasa Inggris.</p>
+                            </div>
+
+                            <!-- PM -->
+                            <div onclick="showSubject('PM', 'Penalaran Matematika (PM)')" class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 cursor-pointer group">
+                                <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-square-root-variable"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Penalaran MTK</h4>
+                                <p class="text-gray-500 text-sm">Matematika terapan dalam kehidupan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kategori: Fondasi UTUL UGM -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-yellow-100 flex items-center justify-center text-yellow-600">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Fondasi UTUL UGM</h3>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <!-- UTUL UGM (Coming Soon) -->
+                            <div class="bg-slate-100 rounded-2xl p-6 border border-gray-200 relative overflow-hidden cursor-not-allowed">
+                                <!-- Badge Coming Soon -->
+                                <div class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                                    Coming Soon
+                                </div>
+                                
+                                <div class="w-14 h-14 bg-gray-200 text-gray-400 rounded-xl flex items-center justify-center text-2xl mb-4">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-400 mb-2">Materi UTUL UGM</h4>
+                                <p class="text-gray-400 text-sm">Persiapan khusus ujian mandiri UGM sedang diracik.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- VIDEO LIST VIEW (Hidden by default, muncul saat subtes diklik) -->
+        <div id="video-list-view" class="hidden py-12 bg-[#f8fafc] min-h-[80vh]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Tombol Kembali -->
+                <button onclick="showHome()" class="flex items-center gap-2 text-gray-500 hover:text-primary mb-6 transition-colors font-medium">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Modul Ajar
+                </button>
+
+                <!-- Header Subtes -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 mb-8 flex items-center gap-6">
+                    <div class="w-20 h-20 bg-indigo-50 text-primary rounded-2xl flex items-center justify-center text-4xl flex-shrink-0">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div>
+                        <h2 id="subject-title" class="text-3xl font-extrabold text-gray-900 mb-2">Nama Materi</h2>
+                        <p class="text-gray-500">Pilih video pembelajaran di bawah ini untuk memulai.</p>
+                    </div>
+                </div>
+
+                <!-- List Video Container (Dinamis diisi lewat JS) -->
+                <div id="video-container" class="grid gap-4">
+                    <!-- Item video akan muncul di sini -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- POP-UP VIDEO MODAL -->
+    <div id="video-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+        <!-- Latar belakang gelap (Klik untuk menutup) -->
+        <div class="absolute inset-0 bg-slate-900/90 backdrop-blur-sm cursor-pointer" onclick="closeVideoModal()"></div>
+        
+        <!-- Kontainer Video -->
+        <div class="relative z-10 w-full max-w-4xl mx-4 bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-700 transform transition-all scale-95 opacity-0" id="video-modal-content">
+            <!-- Tombol Tutup -->
+            <button onclick="closeVideoModal()" class="absolute -top-12 right-0 text-white hover:text-red-400 transition-colors z-20">
+                <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+            
+            <!-- Judul Video di Pop-up -->
+            <div class="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/80 to-transparent z-10 pointer-events-none">
+                <h3 id="modal-video-title" class="text-white font-bold text-lg">Judul Video</h3>
+            </div>
+
+            <!-- Tempat YouTube Iframe -->
+            <div class="relative w-full pt-[56.25%] bg-black"> <!-- Rasio 16:9 -->
+                <iframe 
+                    id="youtube-player"
+                    class="absolute top-0 left-0 w-full h-full"
+                    src="" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 text-center text-gray-500 text-sm mt-auto">
+        <div class="flex justify-center items-center gap-2 mb-4">
+            <i class="fa-solid fa-graduation-cap text-gray-400 text-xl"></i>
+            <span class="font-bold text-lg text-gray-700">YongzNgajarUTBK</span>
+        </div>
+        <p>&copy; 2026 YongzNgajarUTBK. Dibuat dengan <i class="fa-solid fa-heart text-red-500 mx-1"></i> untuk Pejuang Kampus.</p>
+    </footer>
+
+    <script>
+        // =========================================================================
+        // 1. DATA VIDEO (TEMPAT KAMU MENGGANTI LINK YOUTUBE N NANTI)
+        // =========================================================================
+        // Masukkan URL Embed YouTube di sini (harus pakai /embed/)
+        
+        const dataVideo = {
+            'pu': [
+                { judul: "Bab 1: Pengenalan Silogisme", durasi: "15:20", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+                { judul: "Bab 2: Kesimpulan Logis (Trik Cepat)", durasi: "22:10", url: "https://www.youtube.com/embed/jNQXAC9IVRw" },
+                { judul: "Bab 3: Analisis Pernyataan Benar/Salah", durasi: "18:45", url: "https://www.youtube.com/embed/tgbNymZ7vqY" }
+            ],
+            'pk': [
+                { judul: "Bab 1: Aljabar Dasar & Manipulasi", durasi: "20:05", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+                { judul: "Bab 2: Statistika (Membaca Data Rumit)", durasi: "25:30", url: "https://www.youtube.com/embed/jNQXAC9IVRw" }
+            ],
+            'pm': [
+                { judul: "Bab 1: Bedah Soal Penalaran Matematika 2023", durasi: "30:15", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+            ]
+            // Subtes lain (PPU, PBM, LBI, LBE) bisa kamu tambahkan formatnya mirip di atas
+        };
+
+        // =========================================================================
+        // 2. LOGIKA NAVIGASI HALAMAN (Tampil/Sembunyi)
+        // =========================================================================
+        
+        function showHome() {
+            // Tampilkan beranda, sembunyikan list video
+            document.getElementById('home-view').classList.remove('hidden');
+            document.getElementById('video-list-view').classList.add('hidden');
+            window.scrollTo(0, 0); // Gulir ke atas
+        }
+
+        function showSubject(subjectId, subjectName) {
+            // Sembunyikan beranda, tampilkan list video
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('video-list-view').classList.remove('hidden');
+            window.scrollTo(0, 0);
+            
+            // Ubah teks judul subtes
+            document.getElementById('subject-title').innerText = subjectName;
+            
+            // Kosongkan list video sebelumnya
+            const container = document.getElementById('video-container');
+            container.innerHTML = '';
+            
+            // Ambil data video sesuai ID subtes
+            const videos = dataVideo[subjectId.toLowerCase()] || [];
+            
+            // Jika videonya belum ada di data (kosong)
+            if(videos.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                        <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-person-digging text-3xl text-gray-400"></i>
+                        </div>
+                        <h4 class="text-gray-800 font-bold text-lg">Video Sedang Disiapkan!</h4>
+                        <p class="text-gray-500 text-sm mt-2 max-w-md mx-auto">Kak Yongz lagi asik bikin materi buat bab ini. Sabar ya, bakal segera hadir!</p>
+                    </div>`;
+                return;
+            }
+
+            // Jika ada video, buat HTML-nya satu per satu
+            videos.forEach((video) => {
+                const videoHTML = `
+                    <div onclick="openVideoModal('${video.url}', '${video.judul}')" class="group bg-white p-5 rounded-2xl border border-gray-100 hover:border-primary hover:shadow-md transition-all duration-300 cursor-pointer flex items-center justify-between">
+                        <div class="flex items-center gap-5">
+                            <div class="w-12 h-12 bg-indigo-50 text-primary rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 group-hover:text-primary transition-colors text-lg">${video.judul}</h4>
+                                <div class="flex items-center gap-2 text-sm text-gray-500 mt-1">
+                                    <i class="fa-regular fa-clock"></i> ${video.durasi}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden sm:block text-gray-300 group-hover:text-primary transition-colors">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += videoHTML;
+            });
+        }
+
+        // =========================================================================
+        // 3. LOGIKA POP-UP VIDEO (MODAL)
+        // =========================================================================
+        
+        const modal = document.getElementById('video-modal');
+        const modalContent = document.getElementById('video-modal-content');
+        const iframe = document.getElementById('youtube-player');
+        const modalTitle = document.getElementById('modal-video-title');
+
+        function openVideoModal(url, title) {
+            // Tambahkan param ?autoplay=1 agar langsung main saat pop-up dibuka
+            iframe.src = url + "?autoplay=1&rel=0"; 
+            modalTitle.innerText = title;
+            
+            // Tampilkan Modal
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Animasi masuk (kasih sedikit delay agar efek transisi jalan)
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeVideoModal() {
+            // Animasi keluar
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            
+            // Tunggu animasi CSS selesai (300ms) baru hilangkan modal
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                iframe.src = ""; // Kosongkan src untuk mematikan suara video
+            }, 300);
+        }
+    </script>
+</body>
+</html>
