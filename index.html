@@ -45,10 +45,10 @@
                     <span class="font-extrabold text-2xl text-gray-900 tracking-tight">YongzNgajar<span class="text-primary">UTBK</span></span>
                 </div>
                 
-<!-- Desktop Menu -->
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#" onclick="showHome()" class="text-gray-600 hover:text-primary font-medium transition-colors py-2">Beranda</a>
-                    <a href="#" onclick="showHome()" class="text-gray-600 hover:text-primary font-medium transition-colors py-2">Modul Ajar</a>
+                    <a href="#modul" onclick="goToModul(event)" class="text-gray-600 hover:text-primary font-medium transition-colors py-2">Modul Ajar</a>
                     
                     <!-- Menu Bank Soal dengan Dropdown -->
                     <div class="relative group py-2">
@@ -95,7 +95,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="text-gray-400 hover:text-gray-600 font-medium transition-colors cursor-not-allowed">Try Out <span class="text-[10px] bg-gray-100 px-2 py-0.5 rounded-full ml-1">Segera</span></a>
+                    <a href="#" class="text-gray-400 hover:text-gray-600 font-medium transition-colors cursor-not-allowed py-2">Try Out <span class="text-[10px] bg-gray-100 px-2 py-0.5 rounded-full ml-1">Segera</span></a>
                     <a href="#" class="text-gray-600 hover:text-primary font-medium transition-colors py-2">Tentang</a>
                 </div>
 
@@ -354,6 +354,19 @@
             document.getElementById('home-view').classList.remove('hidden');
             document.getElementById('video-list-view').classList.add('hidden');
             window.scrollTo(0, 0); // Gulir ke atas
+        }
+
+        function goToModul(event) {
+            if(event) event.preventDefault(); // Mencegah lompatan standar browser
+            
+            // Pastikan halaman beranda tampil (karena bagian modul ada di beranda)
+            document.getElementById('home-view').classList.remove('hidden');
+            document.getElementById('video-list-view').classList.add('hidden');
+            
+            // Beri jeda sangat sedikit lalu gulir mulus ke bagian Modul
+            setTimeout(() => {
+                document.getElementById('modul').scrollIntoView({ behavior: 'smooth' });
+            }, 10);
         }
 
         function showSubject(subjectId, subjectName) {
